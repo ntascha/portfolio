@@ -1,0 +1,295 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+  @apply font-work-sans;
+}
+
+.default-grid {
+  @apply grid grid-cols-2 gap-x-16 ;
+  @apply md:grid-cols-12 md:gap-x-12;
+}
+
+/* Navigation */
+
+.nav {
+  @apply shadow-xl flex flex-wrap overflow-hidden justify-around bg-white top-0 w-full; 
+}
+
+.nav-text {
+  @apply text-center hover:bg-violet-light p-4 text-violet-dark;
+}
+
+/* About me */
+
+.aboutme {
+  @apply bg-pink-dark p-16;
+}
+
+.am-img {
+  @apply border-[20px] border-violet-light w-450 rounded-3xl aspect-square;
+}
+
+.am-left-site {
+  @apply col-span-full mb-16 text-center;
+  @apply md:col-span-6 md:self-center md:mb-0 md:text-center;
+}
+
+.am-right-site {
+  @apply col-span-full;
+  @apply md:col-span-6 place-self-center;
+}
+
+.am-title {
+  @apply text-white text-5xl my-8 font-bold font-work-sans break-all;
+  line-height: normal;
+}
+
+.am-text {
+  @apply text-white text-3xl font-work-sans;
+  font-size: 24px;
+  line-height: normal;
+}
+
+/* A Quick Background */
+
+.quickbackground {
+  @apply bg-violet-light p-16;
+}
+
+.qb-left-site {
+  @apply col-span-full mb-16;
+  @apply md:col-span-6;
+}
+
+.qb-right-site {
+  @apply col-span-full;
+  @apply md:col-span-6 md:self-center;
+}
+
+.qb-title {
+  @apply text-pink-dark font-bold;
+  font-size: 52px;
+  line-height: normal;
+}
+
+.qb-text {
+  @apply text-white font-bold;
+  font-size: 24px;
+}
+
+.qb-text-uppercase {
+  @apply text-white uppercase font-bold;
+  font-size: 18px;
+}
+
+.qb-boxes {
+  @apply flex flex-col gap-8;
+}
+
+.qb-box {
+  @apply bg-violet-dark p-8 rounded-xl;
+}
+
+/* References */
+
+.references {
+  @apply p-16;
+}
+
+.re-img {
+  @apply col-span-full aspect-square items-center overflow-hidden;
+  @apply md:col-span-4;
+}
+
+.re-box {
+  @apply items-center mx-auto col-span-full flex flex-col w-fit;
+}
+
+.re-text {
+  @apply text-violet-dark text-center mb-16;
+  font-size: 24px;
+}
+
+.re-recommendation {
+  @apply bg-violet-dark p-4 rounded-xl text-center text-white; 
+  font-size: 24px;
+}
+
+/* Technologies I worked with */
+
+.technologies {
+  @apply bg-violet-light p-16;
+}
+
+.te-title {
+  @apply text-pink-dark font-bold col-span-full mb-16;
+  @apply md:col-span-4;
+  font-size: 52px;
+  line-height: normal;
+}
+
+.te-img {
+  @apply aspect-square;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-250px * 7)); }
+}
+
+.animation-speed {
+  animation: scroll 20s linear infinite;
+}
+
+.slider {
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 960px;
+}
+
+.slider::before,
+.slider::after {
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+
+.slide {
+  height: 100px;
+  width: 250px;
+}
+
+/* Reasons why you should hire me */
+
+.hirereasons {
+  @apply p-16;
+}
+
+.hr-left-site {
+  @apply col-span-full mb-16;
+  @apply md:col-span-6;
+}
+
+.hr-right-site {
+  @apply col-span-full;
+  @apply md:col-span-6 md:self-center;
+}
+
+.hr-title {
+  @apply text-pink-dark font-bold;
+  font-size: 52px;
+  line-height: normal;
+}
+
+.hr-text {
+  @apply text-white font-bold;
+  font-size: 24px;
+}
+
+.hr-copy {
+  @apply text-white;
+  font-size: 16px;
+}
+
+.hr-boxes {
+  @apply flex flex-col gap-8;
+}
+
+.hr-box {
+  @apply bg-violet-dark p-8 rounded-xl;
+}
+
+/* Things I Love */
+
+.thingsilove {
+  @apply bg-pink-light p-16;
+}
+
+.ti-title {
+  @apply text-violet-dark font-bold row-start-1 col-start-1 col-span-4 mb-16;
+
+  font-size: 40px;
+  line-height: normal;
+}
+
+.ti-img-1 {
+  @apply col-span-4 rounded-xl mb-8;
+  @apply md:col-start-1 md:col-span-4 md:row-start-2 md:mb-0;
+}
+
+.ti-img-2 {
+  @apply col-span-4 rounded-xl mb-8;
+  @apply md:col-start-5 md:col-span-4 md:row-start-1 md:row-span-2 md:mb-0;
+}
+
+.ti-img-3 {
+  @apply col-span-4 rounded-xl;
+  @apply md:col-start-9 md:col-span-4 md:row-start-1 md:row-span-2;
+}
+
+
+/* Contact */
+
+.contact {
+  @apply p-16;
+}
+
+.co-left-site {
+  @apply col-start-1 col-span-6 self-center;
+}
+
+.co-right-site {
+  @apply col-span-6 self-center;
+}
+
+.co-title {
+  @apply text-left font-bold text-violet-dark mb-16;
+  @apply md:mb-0;
+  font-size: 40px;
+  line-height: normal;
+}
+
+.co-text {
+  @apply text-left text-pink-dark mb-4;
+  font-size: 16px;
+  line-height: normal;
+}
+
+.co-text-uppercase {
+  @apply text-left text-pink-dark uppercase font-bold;
+  font-size: 16px;
+  line-height: normal;
+}
+
+.co-box {
+  @apply flex flex-col mb-8;
+}
+
+.co-img {
+  @apply aspect-square w-8;
+}
