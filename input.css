@@ -3,6 +3,18 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
+* {
+  @apply m-0 p-0 box-border;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 body {
   @apply font-work-sans;
 }
@@ -15,7 +27,8 @@ body {
 /* Navigation */
 
 .nav {
-  @apply shadow-xl flex flex-wrap overflow-hidden justify-around bg-white top-0 w-full; 
+  @apply shadow-xl flex flex-col overflow-hidden bg-white top-0 w-full; 
+  @apply md:flex-row md:flex-wrap justify-around;
 }
 
 .nav-text {
@@ -43,7 +56,8 @@ body {
 }
 
 .am-title {
-  @apply text-white text-5xl my-8 font-bold font-work-sans break-all;
+  @apply text-white text-4xl my-8 font-bold font-work-sans break-all;
+  @apply md:text-5xl;
   line-height: normal;
 }
 
@@ -71,8 +85,12 @@ body {
 
 .qb-title {
   @apply text-pink-dark font-bold;
-  font-size: 52px;
+  font-size: 40px;
   line-height: normal;
+
+  @screen md {
+    font-size: 52px;
+  }
 }
 
 .qb-text {
@@ -125,10 +143,14 @@ body {
 }
 
 .te-title {
-  @apply text-pink-dark font-bold col-span-full mb-16;
-  @apply md:col-span-4;
-  font-size: 52px;
+  @apply text-pink-dark font-bold col-span-full mb-16 break-all;
+  @apply md:col-span-4 md:break-keep;
+  font-size: 40px;
   line-height: normal;
+
+  @screen md {
+    font-size: 52px;
+  }
 }
 
 .te-img {
@@ -137,11 +159,7 @@ body {
 
 @keyframes scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-250px * 7)); }
-}
-
-.animation-speed {
-  animation: scroll 20s linear infinite;
+  100% { transform: translateX(-250px); }
 }
 
 .slider {
@@ -152,29 +170,8 @@ body {
   width: 960px;
 }
 
-.slider::before,
-.slider::after {
-  content: "";
-  height: 100px;
-  position: absolute;
-  width: 200px;
-  z-index: 2;
-  overflow: hidden;
-}
-
-.slider::after {
-  right: 0;
-  top: 0;
-  transform: rotateZ(180deg);
-}
-
-.slider::before {
-  left: 0;
-  top: 0;
-}
-
 .slide-track {
-  animation: scroll 40s linear infinite;
+  animation: scroll 7s linear infinite;
   display: flex;
   width: calc(250px * 14);
 }
@@ -201,9 +198,14 @@ body {
 }
 
 .hr-title {
-  @apply text-pink-dark font-bold;
-  font-size: 52px;
+  @apply text-pink-dark font-bold break-all;
+  @apply md:break-keep;
+  font-size: 40px;
   line-height: normal;
+
+  @screen md {
+    font-size: 52px;
+  }
 }
 
 .hr-text {
@@ -231,8 +233,8 @@ body {
 }
 
 .ti-title {
-  @apply text-violet-dark font-bold row-start-1 col-start-1 col-span-4 mb-16;
-
+  @apply text-violet-dark font-bold row-start-1 col-start-1 col-span-4 mb-16 break-all;
+  @apply md:break-keep;
   font-size: 40px;
   line-height: normal;
 }
@@ -260,18 +262,24 @@ body {
 }
 
 .co-left-site {
-  @apply col-start-1 col-span-6 self-center;
+  @apply col-span-full;
+  @apply md:col-start-1 md:col-span-6 md:self-center;
 }
 
 .co-right-site {
-  @apply col-span-6 self-center;
+  @apply col-span-full;
+  @apply md:col-span-6 md:self-center;
 }
 
 .co-title {
-  @apply text-left font-bold text-violet-dark mb-16;
+  @apply text-left font-bold text-violet-dark mb-16 break-all;
   @apply md:mb-0;
   font-size: 40px;
   line-height: normal;
+
+  @screen md {
+    font-size: 52px;
+  }
 }
 
 .co-text {
@@ -281,7 +289,8 @@ body {
 }
 
 .co-text-uppercase {
-  @apply text-left text-pink-dark uppercase font-bold;
+  @apply text-left text-pink-dark uppercase font-bold break-all;
+  @apply md:break-keep;
   font-size: 16px;
   line-height: normal;
 }
