@@ -14,9 +14,11 @@ module.exports = {
         'work-sans': ['Work Sans', 'sans-serif']
       },
     screens: {
+      xs: "320px",
+      sm: "640px",
       md: "768px",
       lg: "1024px",
-      xl: "1600px",
+      xl: "1280px",
     },
       spacing: {
         '52': '52px',
