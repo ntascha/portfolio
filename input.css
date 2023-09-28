@@ -209,12 +209,12 @@ body {
 }
 
 .hr-text {
-  @apply text-white font-bold;
+  @apply text-white font-bold break-all;
   font-size: 24px;
 }
 
 .hr-copy {
-  @apply text-white;
+  @apply text-white break-words;
   font-size: 16px;
 }
 
@@ -274,6 +274,7 @@ body {
 .co-title {
   @apply text-left font-bold text-violet-dark mb-16 break-all;
   @apply md:mb-0;
+  @apply lg:w-500;
   font-size: 40px;
   line-height: normal;
 

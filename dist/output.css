@@ -2648,6 +2648,7 @@ body {
 }
 
 .hr-text {
+  word-break: break-all;
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -2655,6 +2656,7 @@ body {
 }
 
 .hr-copy {
+  overflow-wrap: break-word;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
   font-size: 16px;
@@ -2789,6 +2791,12 @@ body {
 @media (min-width: 768px) {
   .co-title {
     margin-bottom: 0px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .co-title {
+    width: 500px;
   }
 }
 
