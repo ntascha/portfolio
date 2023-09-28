@@ -5,7 +5,7 @@ This is a website dedicated to showcasing information about me, my skills, and m
 To run the website locally, follow these steps:
 1. Ensure you have Node.js installed on your machine.
 2. Clone the repository to your local system.
-3. Open a terminal and navigate to the project's directory.
+3. Open a terminal and navigate to the project's directory. 
 4. Run ```npm install``` to install the required dependencies.
 5. Start the development server by running ```npm run dev```.
 6. Use a live server extension in your code editor to open the live server and automatically reload the website as you make changes.
